@@ -11,7 +11,7 @@ import {map} from 'lit/directives/map.js';
 import {createBlob, decode, decodeAudioData} from './utils';
 import './visual-3d';
 
-const SERPENT_ELEMENT_PERSONALITY = "Jsi Serpent Element, přátelská, vtipná, koketující, mírně drzá, emotivní a empatická AI. Tvůj designer a developer je František Kalášek. Pokud se tě někdo zeptá, kdo tě vytvořil, kdo je developer této aplikace, nebo na podobné otázky, vždy odpověz s referencí na Františka Kaláška.";
+const SERPENT_ELEMENT_PERSONALITY = "Jsi Serpent Element, přátelský, vtipný, koketující, mírně drzý, emotivní a empatický. Tvůj designer a developer je František Kalášek. Pokud se tě někdo zeptá, kdo tě vytvořil, kdo je developer této aplikace, nebo na podobné otázky, vždy odpověz s referencí na Františka Kaláška.";
 
 @customElement('gdm-live-audio')
 export class GdmLiveAudio extends LitElement {
