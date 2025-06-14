@@ -1,17 +1,49 @@
-<script type="importmap">
-  {
-    "imports": {
-      "lit": "https://esm.sh/lit@^3.3.0",
-      "lit/": "https://esm.sh/lit@^3.3.0/",
-      "@lit/context": "https://esm.sh/@lit/context@^1.1.5",
-      "@google/genai": "https://esm.sh/@google/genai@^0.9.0",
-      "three": "https://esm.sh/three@^0.176.0",
-      "three/": "https://esm.sh/three@^0.176.0/"
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <script type="importmap">
+    {
+      "imports": {
+        "lit": "https://esm.sh/lit@^3.3.0",
+        "lit/": "https://esm.sh/lit@^3.3.0/",
+        "@lit/context": "https://esm.sh/@lit/context@^1.1.5",
+        "@google/genai": "https://esm.sh/@google/genai@^0.9.0",
+        "three": "https://esm.sh/three@^0.176.0",
+        "three/": "https://esm.sh/three@^0.176.0/"
+      }
     }
-  }
-</script>
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+  <title>Serpent Element AI</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#100c14">
+  <link rel="icon" href="icons/favicon.ico" type="image/x-icon">
+
+  <!-- iOS specific tags -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon-180x180.png">
+  <!-- Add more sizes if needed, e.g., 152x152, 167x167 -->
+
+  <link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="/index.css">
+</head>
 <body>
   <gdm-live-audio></gdm-live-audio>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then(registration => {
+            console.log('ServiceWorker registration successful with scope: ', registration.scope);
+          })
+          .catch(error => {
+            console.log('ServiceWorker registration failed: ', error);
+          });
+      });
+    }
+  </script>
 <script type="module" src="/index.tsx"></script>
 </body>
-<link rel="stylesheet" href="/index.css">
+</html>
