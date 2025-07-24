@@ -2,6 +2,37 @@
 <html lang="cs">
 <head>
   <meta charset="UTF-8">
+  
+  <!-- Core meta tags for responsive design -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no, viewport-fit=cover">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="František Kalášek">
+  <meta name="generator" content="Serpent Element AI">
+  
+  <!-- SEO and social media meta tags -->
+  <title>Serpent Element AI - Inteligentní AI Asistent s Hlasovým Rozhraním</title>
+  <meta name="description" content="Zažijte pokročilou konverzaci s AI asistentkou Serpent Element v reálném čase. Hlasový chat, 3D vizuály, analýza obrázků a mnoho dalších funkcí v moderní webové aplikaci.">
+  <meta name="keywords" content="AI asistent, hlasový chat, umělá inteligence, 3D vizuály, webová aplikace, Serpent Element, František Kalášek">
+  
+  <!-- Open Graph meta tags for social sharing -->
+  <meta property="og:title" content="Serpent Element AI - Inteligentní AI Asistent">
+  <meta property="og:description" content="Pokročilý AI asistent s hlasovým rozhraním, 3D vizuály a interaktivními funkcemi">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://serpent-element.ai">
+  <meta property="og:image" content="/icons/icon-512x512.png">
+  <meta property="og:image:width" content="512">
+  <meta property="og:image:height" content="512">
+  <meta property="og:site_name" content="Serpent Element AI">
+  <meta property="og:locale" content="cs_CZ">
+  
+  <!-- Twitter Card meta tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Serpent Element AI - Inteligentní AI Asistent">
+  <meta name="twitter:description" content="Pokročilý AI asistent s hlasovým rozhraním a 3D vizuály">
+  <meta name="twitter:image" content="/icons/icon-512x512.png">
+  <meta name="twitter:creator" content="@FrantisekKalasek">
+  
+  <!-- Import map for ES modules -->
   <script type="importmap">
     {
       "imports": {
@@ -14,36 +45,312 @@
       }
     }
   </script>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
-  <title>Serpent Element AI</title>
+  
+  <!-- PWA and mobile app configuration -->
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#100c14">
+  <meta name="background-color" content="#100c14">
+  <meta name="display" content="fullscreen">
+  
+  <!-- Favicon and app icons -->
   <link rel="icon" href="icons/favicon.ico" type="image/x-icon">
-
-  <!-- iOS specific tags -->
+  <link rel="icon" href="icons/icon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="icons/icon-16.png" sizes="16x16" type="image/png">
+  <link rel="shortcut icon" href="icons/favicon.ico">
+  
+  <!-- iOS specific PWA tags -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <link rel="apple-touch-icon" href="icons/apple-touch-icon-180x180.png">
-  <!-- Add more sizes if needed, e.g., 152x152, 167x167 -->
-
+  <meta name="apple-mobile-web-app-title" content="Serpent AI">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon-180x180.png" sizes="180x180">
+  <link rel="apple-touch-icon" href="icons/icon-152.png" sizes="152x152">
+  <link rel="apple-touch-icon" href="icons/icon-167.png" sizes="167x167">
+  <link rel="apple-touch-icon" href="icons/icon-120.png" sizes="120x120">
+  
+  <!-- iOS splash screens for different devices -->
+  <link rel="apple-touch-startup-image" href="icons/splash-2048x2732.png" sizes="2048x2732" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)">
+  <link rel="apple-touch-startup-image" href="icons/splash-1668x2224.png" sizes="1668x2224" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)">
+  <link rel="apple-touch-startup-image" href="icons/splash-1536x2048.png" sizes="1536x2048" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)">
+  <link rel="apple-touch-startup-image" href="icons/splash-1125x2436.png" sizes="1125x2436" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)">
+  <link rel="apple-touch-startup-image" href="icons/splash-1242x2208.png" sizes="1242x2208" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3)">
+  <link rel="apple-touch-startup-image" href="icons/splash-750x1334.png" sizes="750x1334" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)">
+  <link rel="apple-touch-startup-image" href="icons/splash-640x1136.png" sizes="640x1136" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)">
+  
+  <!-- Android specific PWA tags -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="Serpent AI">
+  
+  <!-- Windows specific PWA tags -->
+  <meta name="msapplication-TileColor" content="#100c14">
+  <meta name="msapplication-TileImage" content="icons/icon-144.png">
+  <meta name="msapplication-config" content="browserconfig.xml">
+  
+  <!-- Security headers -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+  
+  <!-- Performance hints -->
+  <link rel="preconnect" href="https://esm.sh" crossorigin>
+  <link rel="preconnect" href="https://generativelanguage.googleapis.com" crossorigin>
+  <link rel="dns-prefetch" href="https://esm.sh">
+  <link rel="dns-prefetch" href="https://generativelanguage.googleapis.com">
+  
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="index.css">
-<link rel="stylesheet" href="/index.css">
+  
+  <!-- Structured data for search engines -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Serpent Element AI",
+    "description": "Pokročilý AI asistent s hlasovým rozhraním, 3D vizuály a interaktivními funkcemi",
+    "url": "https://serpent-element.ai",
+    "applicationCategory": "ProductivityApplication",
+    "operatingSystem": "Web Browser",
+    "creator": {
+      "@type": "Person",
+      "name": "František Kalášek"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "CZK"
+    },
+    "featureList": [
+      "Hlasový chat s AI",
+      "3D vizuální efekty",
+      "Analýza obrázků",
+      "Real-time konverzace",
+      "Progressive Web App"
+    ]
+  }
+  </script>
 </head>
 <body>
-  <gdm-live-audio></gdm-live-audio>
+  <!-- Skip to main content for accessibility -->
+  <a href="#main-content" class="sr-only focus-visible">Přeskočit na hlavní obsah</a>
+  
+  <!-- No JavaScript fallback -->
+  <noscript>
+    <div style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: #100c14; color: #f0f0f0; display: flex; align-items: center; justify-content: center; flex-direction: column; text-align: center; padding: 2rem;">
+      <h1>⚠️ JavaScript je vyžadován</h1>
+      <p>Tato aplikace vyžaduje JavaScript pro správné fungování.<br>Prosím povolte JavaScript ve vašem prohlížeči a obnovte stránku.</p>
+      <p style="margin-top: 2rem; font-size: 0.9rem; opacity: 0.7;">
+        This application requires JavaScript to function properly.<br>
+        Please enable JavaScript in your browser and refresh the page.
+      </p>
+    </div>
+  </noscript>
+  
+  <!-- Loading screen -->
+  <div id="loading-screen" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(45deg, #1a1625 0%, #2d1b69 100%); display: flex; align-items: center; justify-content: center; flex-direction: column; z-index: 9999;">
+    <div style="text-align: center;">
+      <!-- App logo/icon -->
+      <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #7c3aed, #ec4899); border-radius: 20px; margin: 0 auto 2rem; display: flex; align-items: center; justify-content: center; font-size: 40px; animation: bounceIn 1s ease-out;">
+        🐍
+      </div>
+      
+      <!-- Loading spinner -->
+      <div class="spinner" style="margin: 0 auto 1rem;"></div>
+      
+      <!-- Loading text -->
+      <h2 style="color: #f0f0f0; margin: 0 0 0.5rem; font-size: 1.5rem;">Serpent Element AI</h2>
+      <p style="color: #b0b0b0; margin: 0; font-size: 0.9rem;">Inicializace AI asistenta...</p>
+      
+      <!-- Progress indicator -->
+      <div style="width: 200px; height: 4px; background: rgba(255,255,255,0.1); border-radius: 2px; margin: 2rem auto 0; overflow: hidden;">
+        <div id="loading-progress" style="width: 0%; height: 100%; background: linear-gradient(90deg, #7c3aed, #a855f7); border-radius: 2px; transition: width 0.3s ease;"></div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Main application content -->
+  <main id="main-content" role="main" aria-label="Serpent Element AI Interface">
+    <gdm-live-audio></gdm-live-audio>
+  </main>
+  
+  <!-- Error boundary for better error handling -->
+  <div id="error-boundary" style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: #100c14; color: #f0f0f0; padding: 2rem; text-align: center;">
+    <h1>🚫 Aplikace narazila na chybu</h1>
+    <p>Omlouváme se za nepříjemnosti. Prosím obnovte stránku a zkuste to znovu.</p>
+    <button onclick="window.location.reload()" style="background: linear-gradient(135deg, #7c3aed, #a855f7); color: white; border: none; padding: 1rem 2rem; border-radius: 8px; font-size: 1rem; cursor: pointer; margin-top: 1rem;">
+      🔄 Obnovit aplikaci
+    </button>
+    <details style="margin-top: 2rem; text-align: left; max-width: 600px; margin-left: auto; margin-right: auto;">
+      <summary style="cursor: pointer; color: #a855f7;">Zobrazit technické detaily</summary>
+      <pre id="error-details" style="background: rgba(255,255,255,0.05); padding: 1rem; border-radius: 8px; overflow: auto; margin-top: 1rem; font-size: 0.8rem;"></pre>
+    </details>
+  </div>
+  
+  <!-- PWA install prompt -->
+  <div id="pwa-install-prompt" style="display: none; position: fixed; bottom: 1rem; left: 1rem; right: 1rem; background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 1rem; color: #f0f0f0; z-index: 1000;">
+    <div style="display: flex; align-items: center; gap: 1rem;">
+      <div style="font-size: 2rem;">📱</div>
+      <div style="flex: 1;">
+        <h3 style="margin: 0 0 0.5rem; font-size: 1rem;">Instalovat aplikaci</h3>
+        <p style="margin: 0; font-size: 0.85rem; opacity: 0.8;">Přidejte Serpent Element AI na domovskou obrazovku pro lepší zážitek</p>
+      </div>
+      <div style="display: flex; gap: 0.5rem;">
+        <button id="pwa-install-btn" style="background: linear-gradient(135deg, #7c3aed, #a855f7); color: white; border: none; padding: 0.5rem 1rem; border-radius: 6px; font-size: 0.85rem; cursor: pointer;">
+          Instalovat
+        </button>
+        <button id="pwa-dismiss-btn" style="background: transparent; color: #b0b0b0; border: 1px solid rgba(255,255,255,0.2); padding: 0.5rem; border-radius: 6px; font-size: 0.85rem; cursor: pointer;">
+          ✕
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Performance monitoring -->
+  <script>
+    // Performance timing
+    window.addEventListener('load', () => {
+      const loadTime = performance.now();
+      console.log(`%c🚀 Serpent Element AI loaded in ${Math.round(loadTime)}ms`, 'color: #7c3aed; font-weight: bold;');
+      
+      // Hide loading screen
+      const loadingScreen = document.getElementById('loading-screen');
+      if (loadingScreen) {
+        loadingScreen.style.opacity = '0';
+        loadingScreen.style.transition = 'opacity 0.5s ease-out';
+        setTimeout(() => {
+          loadingScreen.style.display = 'none';
+        }, 500);
+      }
+    });
+    
+    // Loading progress simulation
+    let progress = 0;
+    const progressBar = document.getElementById('loading-progress');
+    const progressInterval = setInterval(() => {
+      progress += Math.random() * 30;
+      if (progress >= 100) {
+        progress = 100;
+        clearInterval(progressInterval);
+      }
+      if (progressBar) {
+        progressBar.style.width = progress + '%';
+      }
+    }, 200);
+    
+    // Error handling
+    window.addEventListener('error', (event) => {
+      console.error('Global error:', event.error);
+      const errorBoundary = document.getElementById('error-boundary');
+      const errorDetails = document.getElementById('error-details');
+      const loadingScreen = document.getElementById('loading-screen');
+      
+      if (errorBoundary && errorDetails) {
+        errorDetails.textContent = `${event.error?.stack || event.error?.message || 'Unknown error'}`;
+        errorBoundary.style.display = 'flex';
+        errorBoundary.style.flexDirection = 'column';
+        errorBoundary.style.alignItems = 'center';
+        errorBoundary.style.justifyContent = 'center';
+        
+        if (loadingScreen) {
+          loadingScreen.style.display = 'none';
+        }
+      }
+    });
+    
+    // PWA install handling
+    let deferredPrompt;
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+      const installPrompt = document.getElementById('pwa-install-prompt');
+      if (installPrompt && !localStorage.getItem('pwa-dismissed')) {
+        installPrompt.style.display = 'block';
+      }
+    });
+    
+    document.getElementById('pwa-install-btn')?.addEventListener('click', async () => {
+      if (deferredPrompt) {
+        deferredPrompt.prompt();
+        const { outcome } = await deferredPrompt.userChoice;
+        console.log(`PWA install outcome: ${outcome}`);
+        deferredPrompt = null;
+        document.getElementById('pwa-install-prompt').style.display = 'none';
+      }
+    });
+    
+    document.getElementById('pwa-dismiss-btn')?.addEventListener('click', () => {
+      document.getElementById('pwa-install-prompt').style.display = 'none';
+      localStorage.setItem('pwa-dismissed', 'true');
+    });
+    
+    // Check if running as PWA
+    if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone) {
+      document.body.classList.add('standalone');
+      console.log('🎉 Running as PWA');
+    }
+    
+    // Network status monitoring
+    window.addEventListener('online', () => {
+      console.log('🌐 Back online');
+      document.body.classList.remove('offline');
+    });
+    
+    window.addEventListener('offline', () => {
+      console.log('📡 Gone offline');
+      document.body.classList.add('offline');
+    });
+  </script>
+  
+  <!-- Service Worker registration -->
   <script>
     if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js')
-          .then(registration => {
-            console.log('ServiceWorker registration successful with scope: ', registration.scope);
-          })
-          .catch(error => {
-            console.log('ServiceWorker registration failed: ', error);
+      window.addEventListener('load', async () => {
+        try {
+          const registration = await navigator.serviceWorker.register('/sw.js');
+          console.log('✅ ServiceWorker registration successful:', registration.scope);
+          
+          // Listen for updates
+          registration.addEventListener('updatefound', () => {
+            const newWorker = registration.installing;
+            newWorker.addEventListener('statechange', () => {
+              if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                console.log('🔄 New version available, reload to update');
+                // Could show update notification here
+              }
+            });
           });
+        } catch (error) {
+          console.warn('❌ ServiceWorker registration failed:', error);
+        }
       });
     }
   </script>
-<script type="module" src="/index.tsx"></script>
+  
+  <!-- Main application script -->
+  <script type="module" src="/index.tsx"></script>
+  
+  <!-- Analytics and monitoring (placeholder) -->
+  <script>
+    // Performance monitoring
+    if ('PerformanceObserver' in window) {
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'measure') {
+            console.log(`📊 ${entry.name}: ${Math.round(entry.duration)}ms`);
+          }
+        }
+      });
+      observer.observe({ entryTypes: ['measure'] });
+    }
+    
+    // Memory monitoring
+    if ('memory' in performance) {
+      setInterval(() => {
+        const memory = performance.memory;
+        if (memory.usedJSHeapSize > memory.jsHeapSizeLimit * 0.9) {
+          console.warn('⚠️ High memory usage detected');
+        }
+      }, 30000);
+    }
+  </script>
 </body>
 </html>
