@@ -1,40 +1,230 @@
 {
-  "name": "Serpent Element AI",
-  "short_name": "SerpentAI",
-  "description": "Experience real-time voice and text chat with Serpent Element AI, featuring 3D visuals that react to your conversation. Generate and edit images, get facts, and enjoy an interactive AI experience.",
+  "name": "Serpent Element AI - Inteligentní AI Asistent",
+  "short_name": "Serpent AI",
+  "description": "Zažijte pokročilou konverzaci s AI asistentkou Serpent Element v reálném čase. Hlasový chat, 3D vizuály, analýza obrázků a mnoho dalších funkcí v moderní webové aplikaci.",
   "start_url": "/",
+  "scope": "/",
   "display": "fullscreen",
-  "orientation": "portrait",
+  "display_override": ["fullscreen", "standalone", "minimal-ui"],
+  "orientation": "portrait-primary",
   "background_color": "#100c14",
-  "theme_color": "#100c14",
+  "theme_color": "#7c3aed",
+  "categories": ["productivity", "utilities", "education", "entertainment"],
+  "lang": "cs-CZ",
+  "dir": "ltr",
+  "id": "serpent-element-ai",
+  "version": "1.0.0",
   "icons": [
     {
-      "src": "icons/icon-192x192.png",
+      "src": "icons/icon-72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "icons/icon-512x512.png",
+      "src": "icons/icon-384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-1024.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any"
     }
   ],
   "screenshots": [
     {
-      "src": "screenshots/screenshot1.png",
-      "sizes": "1080x1920",
+      "src": "screenshots/mobile-chat.png",
+      "sizes": "390x844",
       "type": "image/png",
       "form_factor": "narrow",
-      "label": "Voice and Text Chat Interface"
+      "label": "AI Chat Interface - Hlasový a textový chat s AI asistentkou"
     },
     {
-      "src": "screenshots/screenshot2.png",
-      "sizes": "1080x1920",
+      "src": "screenshots/mobile-3d.png",
+      "sizes": "390x844",
       "type": "image/png",
       "form_factor": "narrow",
-      "label": "Interactive 3D Visuals"
+      "label": "3D Vizuály - Interaktivní 3D efekty reagující na konverzaci"
+    },
+    {
+      "src": "screenshots/mobile-camera.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Analýza Obrázků - AI rozpoznávání a popis obsahu obrázků"
+    },
+    {
+      "src": "screenshots/desktop-main.png",
+      "sizes": "1920x1080",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Desktop Rozhraní - Kompletní AI asistent pro počítače"
+    },
+    {
+      "src": "screenshots/desktop-features.png",
+      "sizes": "1920x1080",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Pokročilé Funkce - Generování faktů, citátů a komplexní AI interakce"
     }
+  ],
+  "shortcuts": [
+    {
+      "name": "Nový Chat",
+      "short_name": "Chat",
+      "description": "Zahájit novou konverzaci s AI",
+      "url": "/?action=new-chat",
+      "icons": [
+        {
+          "src": "icons/shortcut-chat.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Hlasový Chat",
+      "short_name": "Hlas",
+      "description": "Spustit hlasový režim",
+      "url": "/?action=voice-chat",
+      "icons": [
+        {
+          "src": "icons/shortcut-voice.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Analýza Obrázku",
+      "short_name": "Foto",
+      "description": "Analyzovat obrázek pomocí AI",
+      "url": "/?action=image-analysis",
+      "icons": [
+        {
+          "src": "icons/shortcut-camera.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Náhodný Fakt",
+      "short_name": "Fakt",
+      "description": "Získat zajímavý fakt",
+      "url": "/?action=random-fact",
+      "icons": [
+        {
+          "src": "icons/shortcut-fact.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    }
+  ],
+  "share_target": {
+    "action": "/share",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url",
+      "files": [
+        {
+          "name": "images",
+          "accept": ["image/*"]
+        }
+      ]
+    }
+  },
+  "protocol_handlers": [
+    {
+      "protocol": "web+serpentai",
+      "url": "/?protocol=%s"
+    }
+  ],
+  "file_handlers": [
+    {
+      "action": "/handle-files",
+      "accept": {
+        "image/*": [".jpg", ".jpeg", ".png", ".gif", ".webp", ".bmp", ".svg"],
+        "text/*": [".txt", ".md", ".json"],
+        "audio/*": [".mp3", ".wav", ".ogg", ".m4a", ".aac"]
+      }
+    }
+  ],
+  "launch_handler": {
+    "client_mode": "navigate-existing"
+  },
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  "handle_links": "preferred",
+  "prefer_related_applications": false,
+  "related_applications": [
+    {
+      "platform": "play",
+      "url": "https://play.google.com/store/apps/details?id=com.serpent.elementai",
+      "id": "com.serpent.elementai"
+    },
+    {
+      "platform": "itunes",
+      "url": "https://apps.apple.com/app/serpent-element-ai/id123456789",
+      "id": "123456789"
+    }
+  ],
+  "permissions": [
+    "camera",
+    "microphone",
+    "notifications",
+    "persistent-storage",
+    "background-sync"
+  ],
+  "features": [
+    "voice-recognition",
+    "camera-access",
+    "ai-integration",
+    "3d-graphics",
+    "offline-support"
   ]
 }
