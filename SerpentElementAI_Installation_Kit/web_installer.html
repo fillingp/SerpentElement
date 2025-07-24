@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serpent Element AI - Install</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+        .icon {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #7c3aed, #ec4899);
+            border-radius: 20px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 50px;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+        }
+        .install-btn {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px;
+            transition: transform 0.2s;
+        }
+        .install-btn:hover {
+            transform: scale(1.05);
+        }
+        .install-btn:active {
+            transform: scale(0.95);
+        }
+        .method {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px 0;
+            text-align: left;
+        }
+        .method h3 {
+            color: #333;
+            margin-top: 0;
+        }
+        .device-info {
+            background: #e3f2fd;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 20px 0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="icon">🤖</div>
+        <h1>Serpent Element AI</h1>
+        <p class="subtitle">AI-Powered Mobile Assistant</p>
+        
+        <div class="device-info" id="deviceInfo">
+            Detecting your device...
+        </div>
+        
+        <div class="method">
+            <h3>🍎 TestFlight (Recommended)</h3>
+            <p>Official Apple beta testing platform</p>
+            <a href="https://testflight.apple.com/join/YOUR_CODE" class="install-btn">
+                Install via TestFlight
+            </a>
+        </div>
+        
+        <div class="method">
+            <h3>📱 Direct Install</h3>
+            <p>Enterprise distribution (requires trust)</p>
+            <a href="itms-services://?action=download-manifest&url=https://your-server.com/manifest.plist" class="install-btn">
+                Install Directly
+            </a>
+        </div>
+        
+        <div class="method">
+            <h3>💾 Download IPA</h3>
+            <p>Manual installation via computer</p>
+            <a href="SerpentElementAI.ipa" class="install-btn" download>
+                Download IPA
+            </a>
+        </div>
+        
+        <p style="font-size: 12px; color: #999; margin-top: 30px;">
+            Requires iOS 12.0 or later<br>
+            Built with ❤️ using Linux tools
+        </p>
+    </div>
+    
+    <script>
+        // Detect device and show appropriate info
+        const deviceInfo = document.getElementById('deviceInfo');
+        const userAgent = navigator.userAgent;
+        
+        if (/iPhone|iPad|iPod/.test(userAgent)) {
+            const ios = userAgent.match(/OS (\d+)_(\d+)/);
+            if (ios) {
+                const version = `${ios[1]}.${ios[2]}`;
+                deviceInfo.innerHTML = `📱 iOS ${version} detected - Ready to install!`;
+                deviceInfo.style.background = '#e8f5e8';
+            } else {
+                deviceInfo.innerHTML = '📱 iOS device detected - Ready to install!';
+                deviceInfo.style.background = '#e8f5e8';
+            }
+        } else if (/Android/.test(userAgent)) {
+            deviceInfo.innerHTML = '🤖 Android detected - iOS app requires iPhone/iPad';
+            deviceInfo.style.background = '#fff3cd';
+        } else {
+            deviceInfo.innerHTML = '💻 Computer detected - Use iTunes/Xcode to install on iOS device';
+            deviceInfo.style.background = '#e3f2fd';
+        }
+    </script>
+</body>
+</html>
